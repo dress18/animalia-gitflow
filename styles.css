@@ -2,12 +2,13 @@
    ZONA DE CONFLICTO PAREJA B (CODERS 3 Y 4): VARIABLES
    ========================================================= */
 :root {
-  --color-primario: #1e3a8a;
-  --color-secundario: #0284c7;
-  --color-fondo: #f8fafc;
+  --color-primario: #064e3b;
+  --color-secundario: #059669;
+  --color-acento: #10b981;
+  --color-fondo: #f0fdf4;
   --color-texto: #1e293b;
   --color-blanco: #ffffff;
-  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --sombra-suave: 0 6px 16px rgba(6, 78, 59, 0.12);
 }
 
 * {
@@ -59,10 +60,10 @@ body {
 }
 
 .hero-banner {
-  background: var(--color-secundario);
+  background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
   color: var(--color-blanco);
-  padding: 40px 28px;
-  border-radius: 12px;
+  padding: 44px 30px;
+  border-radius: 14px;
   margin: 28px 0;
   text-align: center;
 }
@@ -70,28 +71,35 @@ body {
 /* ZONA DE CONFLICTO PAREJA B: GRILLA Y TARJETAS */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
   margin: 24px 0 40px;
 }
 
 .card {
   background-color: var(--color-blanco);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 22px;
   box-shadow: var(--sombra-suave);
-  border-top: 4px solid var(--color-secundario);
+  border-top: 4px solid var(--color-acento);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
 }
 
 .badge {
   display: inline-block;
-  background-color: #e0f2fe;
-  color: #0369a1;
-  font-size: 0.82rem;
+  background-color: #d1fae5;
+  color: #065f46;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
-  margin-top: 10px;
+  margin-top: 12px;
+  text-decoration: none;
 }
 
 .site-footer {
